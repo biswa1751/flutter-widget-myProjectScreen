@@ -9,7 +9,7 @@ import '../../../features/feature_project_management/models/project.dart';
 import '../widgets/appbar_widget.dart';
 import '../widgets/dialog_input_single.dart';
 
-import 'my_page_screen.dart';
+import 'my_pages_screen.dart';
 
 class MyProjectsScreen extends StatefulWidget {
   const MyProjectsScreen({Key? key}) : super(key: key);
