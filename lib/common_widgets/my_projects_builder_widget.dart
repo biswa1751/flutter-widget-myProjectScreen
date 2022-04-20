@@ -19,6 +19,7 @@ class MyProjectBuilderWidget extends StatelessWidget {
       );
     } else {
       return ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         children: (projectModels ?? [])
             .map((projectModel) => MyProjectWidget(projectModel: projectModel))
             .toList(),

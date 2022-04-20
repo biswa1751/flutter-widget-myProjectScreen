@@ -13,8 +13,22 @@ class MyProjectWidget extends StatelessWidget {
       children: <Widget>[
         Card(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(projectModel.title),
+            padding: const EdgeInsets.all(15.0),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    projectModel.title,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  // TODO : should i add this text
+                  Text('6 Documents',
+                      style: Theme.of(context).textTheme.bodyMedium),
+                ],
+              ),
+            ),
           ),
         ),
         AppNetworkImage(

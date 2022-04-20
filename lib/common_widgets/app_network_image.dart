@@ -27,6 +27,7 @@ class AppNetworkImage extends StatelessWidget {
             imageUrl!,
             height: height,
             width: width,
+            fit: BoxFit.cover,
           );
   }
 }

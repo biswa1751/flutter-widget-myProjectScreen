@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:upwork_001_flutter_mpjs_screen/design_ui_screen.dart';
 
 // import 'features/feature_project_management/screens/my_page_screen.dart';
 import 'features/feature_project_management/screens/main_screen.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'dev_flutter_3_pages_readonly--from-clone',
 
       // initialRoute: NavRoutes.splash,
-      initialRoute: NavRoutes.myprojects,
+      initialRoute: DesignUiScreen.routeName,
       routes: {
         // NavRoutes.splash: (context) {
         //   return WillPopScope(
@@ -28,13 +29,13 @@ class MyApp extends StatelessWidget {
         //   );
         // },
         // ...
-
+        DesignUiScreen.routeName: (context) => DesignUiScreen(),
         NavRoutes.myprojects: (context) {
           return WillPopScope(
-              onWillPop: () async {
-                return false;
-              },
-              child: MyProjectsScreen(),
+            onWillPop: () async {
+              return false;
+            },
+            child: const MyProjectsScreen(),
           );
         },
 
@@ -48,7 +49,6 @@ class MyApp extends StatelessWidget {
         //   );
         // },
       },
-      
     );
   }
 }
