@@ -16,7 +16,7 @@ class DesignUiScreen extends StatelessWidget {
     MiniPageModel(id: 2, title: 'id1', imgUrl: AppNetworkImages.emptyImage),
     MiniPageModel(id: 3, title: 'id1', imgUrl: AppNetworkImages.emptyImage),
     MiniPageModel(id: 4, title: 'id1', imgUrl: AppNetworkImages.emptyImage),
-    MiniPageModel(id: 5, title: 'id1', imgUrl: AppNetworkImages.emptyImage),
+    // MiniPageModel(id: 5, title: 'id1', imgUrl: AppNetworkImages.emptyImage),
   ]);
 
   @override
