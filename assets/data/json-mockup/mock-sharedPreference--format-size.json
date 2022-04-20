@@ -1,0 +1,14 @@
+{
+    "data": [
+        {
+            "name": "custom-size--vary-height",
+            "width": 333,
+            "height": 1234
+        },
+        {
+            "name": "custom-size--vary-width",
+            "width": 5678,
+            "height": 555
+        }
+    ]
+}
