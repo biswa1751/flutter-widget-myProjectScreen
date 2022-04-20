@@ -13,22 +13,27 @@ class ThemeAlertDialog extends StatefulWidget {
 class _ThemeAlertDialogState extends State<ThemeAlertDialog> {
   @override
   Widget build(BuildContext context) {
-    final color =
-        CustomProjectTheme.getCustomProjectThemeDefault().backgroundColor;
+    final customProjectTheme =
+        CustomProjectTheme.getCustomProjectThemeDefault();
     return AlertDialog(
       title: const Text('Rename Project'),
       content: TextField(
-        cursorColor: color,
+        cursorColor: customProjectTheme.textFieldBackground,
         decoration: InputDecoration(
           labelText: 'ENTER NEW NAME',
-          focusColor: Colors.red,
-          border: UnderlineInputBorder(borderSide: BorderSide(color: color!)),
-          enabledBorder:
-              UnderlineInputBorder(borderSide: BorderSide(color: color)),
-          focusedBorder:
-              UnderlineInputBorder(borderSide: BorderSide(color: color)),
-          labelStyle:
-              Theme.of(context).textTheme.titleMedium!.copyWith(color: color),
+          border: UnderlineInputBorder(
+              borderSide:
+                  BorderSide(color: customProjectTheme.textFieldBackground!)),
+          enabledBorder: UnderlineInputBorder(
+              borderSide:
+                  BorderSide(color: customProjectTheme.textFieldBackground!)),
+          focusedBorder: UnderlineInputBorder(
+              borderSide:
+                  BorderSide(color: customProjectTheme.textFieldBackground!)),
+          labelStyle: Theme.of(context)
+              .textTheme
+              .titleMedium!
+              .copyWith(color: customProjectTheme.hintTextOnTextField),
         ),
       ),
       actions: [
@@ -38,7 +43,10 @@ class _ThemeAlertDialogState extends State<ThemeAlertDialog> {
           },
           child: Text(
             'CANCEL',
-            style: Theme.of(context).textTheme.button!.copyWith(color: color),
+            style: Theme.of(context)
+                .textTheme
+                .button!
+                .copyWith(color: customProjectTheme.btnAColor),
           ),
         ),
         TextButton(
@@ -48,7 +56,10 @@ class _ThemeAlertDialogState extends State<ThemeAlertDialog> {
           },
           child: Text(
             'RENAME',
-            style: Theme.of(context).textTheme.button!.copyWith(color: color),
+            style: Theme.of(context)
+                .textTheme
+                .button!
+                .copyWith(color: customProjectTheme.btnBColor),
           ),
         ),
       ],

@@ -21,7 +21,7 @@ class AppNetworkImage extends StatelessWidget {
             height: height,
             width: width,
             color: CustomProjectTheme.getCustomProjectThemeDefault()
-                .backgroundColor,
+                .previewCardBackgroundColor,
           )
         : Image.network(
             imageUrl!,

@@ -11,7 +11,8 @@ class CustomProjectTheme {
       btnBColor,
       btnCColor,
       unselectedItemTextColor,
-      unselectedItemColor;
+      unselectedItemColor,
+      previewCardBackgroundColor;
   // ...
 
   static CustomProjectTheme getCustomProjectThemeDefault() {
@@ -28,11 +29,12 @@ class CustomProjectTheme {
     customProjectTheme.btnCColor = const Color(0xff343940);
     customProjectTheme.unselectedItemTextColor = const Color(0xff343940);
     customProjectTheme.unselectedItemColor = const Color(0xff343940);
+    customProjectTheme.previewCardBackgroundColor = const Color(0xfff6f6f6);
     // ...
 
     return customProjectTheme;
   }
-  
+
   static CustomProjectTheme getCustomProjectThemeA() {
     CustomProjectTheme customProjectTheme = CustomProjectTheme();
 
@@ -41,6 +43,7 @@ class CustomProjectTheme {
 
     return customProjectTheme;
   }
+
   static CustomProjectTheme getCustomProjectThemeB() {
     CustomProjectTheme customProjectTheme = CustomProjectTheme();
 

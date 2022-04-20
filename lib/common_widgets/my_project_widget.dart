@@ -9,10 +9,11 @@ class MyProjectWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final pages = projectModel.pages;
-    return Column(
-      children: <Widget>[
-        Card(
-          child: Padding(
+    return Card(
+      elevation: 3,
+      child: Column(
+        children: <Widget>[
+          Padding(
             padding: const EdgeInsets.all(15.0),
             child: Align(
               alignment: Alignment.centerLeft,
@@ -30,31 +31,34 @@ class MyProjectWidget extends StatelessWidget {
               ),
             ),
           ),
-        ),
-        AppNetworkImage(
-          imageUrl: pages.first?.imgUrl,
-          height: 300,
-          width: double.maxFinite,
-        ),
-        Row(
-          children: List.generate(
+          AppNetworkImage(
+            imageUrl: pages.first?.imgUrl,
+            height: 300,
+            width: double.maxFinite,
+          ),
+          Row(
+            children: List.generate(
               pages.length > 4 ? 4 : pages.length - 1,
               (index) => Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: GestureDetector(
-                        onTap: () {
-                          debugPrint(pages[index]?.id.toString());
-                        },
-                        child: AppNetworkImage(
-                          imageUrl: pages[index + 1]?.imgUrl,
-                          height: 50,
-                        ),
-                      ),
+                child: Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Colors.grey.withOpacity(0.2), width: 0.5)),
+                  child: GestureDetector(
+                    onTap: () {
+                      debugPrint(pages[index]?.id.toString());
+                    },
+                    child: AppNetworkImage(
+                      imageUrl: pages[index + 1]?.imgUrl,
+                      height: 50,
                     ),
-                  )),
-        )
-      ],
+                  ),
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
