@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:upwork_001_flutter_mpjs_screen/common_widgets/images.dart';
 import 'package:upwork_001_flutter_mpjs_screen/common_widgets/my_projects_builder_widget.dart';
+import 'package:upwork_001_flutter_mpjs_screen/common_widgets/theme_alert_dialog.dart';
 import 'package:upwork_001_flutter_mpjs_screen/common_widgets/theme_app_bar.dart';
 import 'package:upwork_001_flutter_mpjs_screen/common_widgets/theme_floating_action_button.dart';
 import 'package:upwork_001_flutter_mpjs_screen/features/feature_project_management/models/page.dart';
@@ -26,8 +27,11 @@ class DesignUiScreen extends StatelessWidget {
       appBar: const ThemeAppBar(title: 'My Projects'),
       body: MyProjectBuilderWidget(projectModels: projectModels),
       floatingActionButton: ThemeFloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
+        onPressed: () {
+          showDialog(
+              context: context,
+              builder: (_) => const ThemeAlertDialog(projectId: 1234));
+        },
       ),
     );
   }

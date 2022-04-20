@@ -18,8 +18,8 @@ class CustomProjectTheme {
     CustomProjectTheme customProjectTheme = CustomProjectTheme();
 
     // TODO: custom-color-theme(value)
-    customProjectTheme.backgroundColor = const Color(0xff343940);
-    customProjectTheme.appBarColor = const Color(0xff343940);
+    customProjectTheme.backgroundColor = const Color(0xff623FC3);
+    customProjectTheme.appBarColor = const Color(0xff623FC3);
     customProjectTheme.unFocusPopupOverlayColor = const Color(0xff343940);
     customProjectTheme.textFieldBackground = const Color(0xff343940);
     customProjectTheme.hintTextOnTextField = const Color(0xff343940);

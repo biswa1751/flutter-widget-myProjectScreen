@@ -13,7 +13,7 @@ class ThemeAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(title),
       backgroundColor:
-          CustomProjectTheme.getCustomProjectThemeDefault().backgroundColor,
+          CustomProjectTheme.getCustomProjectThemeDefault().appBarColor,
     );
   }
 
